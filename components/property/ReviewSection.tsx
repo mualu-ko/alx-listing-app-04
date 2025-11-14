@@ -1,13 +1,7 @@
 import Image from "next/image";
+import { ReviewSectionProps } from "@/interfaces";
 
-type Review = {
-  avatar: string;
-  name: string;
-  rating: number;
-  comment: string;
-};
-
-const ReviewSection: React.FC<{ reviews: Review[] }> = ({ reviews }) => {
+const ReviewSection: React.FC<ReviewSectionProps> = ({ reviews }) => {
   return (
     <div className="mt-8">
       <h3 className="text-2xl font-semibold">Reviews</h3>

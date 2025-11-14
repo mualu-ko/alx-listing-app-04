@@ -1,13 +1,9 @@
 import React from "react";
-import { PropertyProps } from "@/interfaces";
+import { PropertyCardProps } from "@/interfaces";
 import Button from "@/components/common/Button";
 import Link from "next/link";
 
-interface PropertyCardProps {
-  property: PropertyProps;
-}
-
-export default function PropertyCard({ property }: PropertyCardProps) {
+export default function PropertyCard({ property }: { property: PropertyCardProps }) {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
       {/* Image Section */}
@@ -85,13 +81,6 @@ export default function PropertyCard({ property }: PropertyCardProps) {
             </p>
           </div>
         </div>
-
-        {/* Description (if provided) */}
-        {property.description && (
-          <p className="text-gray-600 text-sm mt-3 line-clamp-2">
-            {property.description}
-          </p>
-        )}
 
         {/* Action Buttons */}
         <div className="mt-4 flex gap-2">
