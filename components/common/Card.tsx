@@ -1,0 +1,2 @@
+import { CardProps } from '../../interfaces';
+
